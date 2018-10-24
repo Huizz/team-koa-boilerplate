@@ -15,6 +15,18 @@ npm run dev
 
 By default the API server starts on port 3002, http://localhost:3002.
 
+## Guidelines
+- Use HTTP Methods & API Routes. API routes should always use nouns as resource identifiers.
+- Routes are used to define routing in app. Each folder is a  resource identifier
+- Use HTTP Status Codes Correctly
+    - 2xx, if everything was okay,
+    - 3xx, if the resource was moved,
+    - 4xx, if the request cannot be fulfilled because of a client error (like requesting a resource that does not exist),
+    - 5xx, if something went wrong on the API side (like an exception happened).
+- Koa guide: https://github.com/koajs/koa/blob/master/docs/guide.md
+- Models are for business logic implementation. Models map to data in db
+
+
 ## Description as per koalerplate
 
 ## What's in the package?
