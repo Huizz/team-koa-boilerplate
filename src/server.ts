@@ -1,13 +1,13 @@
-const Koa = require('koa')
-const Router = require('koa-router')
-const Logger = require('koa-logger')
-const Cors = require('@koa/cors')
-const BodyParser = require('koa-bodyparser')
-const Helmet = require('koa-helmet')
-const respond = require('koa-respond')
+import * as Koa from 'koa';
+import * as Logger from 'koa-logger';
+import * as Cors from '@koa/cors';
+import * as BodyParser from 'koa-bodyparser';
+// const BodyParser = require('koa-bodyparser')
+import * as Helmet from 'koa-helmet';
+import router from './routes';
 
 const app = new Koa()
-const router = new Router()
+// const router = new Router()
 
 app.use(Helmet())
 
@@ -25,10 +25,8 @@ app.use(BodyParser({
   }
 }))
 
-app.use(respond())
-
 // API routes
-require('./routes')(router)
+// require('./routes')(router)
 app.use(router.routes())
 app.use(router.allowedMethods())
 
