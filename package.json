@@ -15,7 +15,7 @@
   "version": "1.2.2",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index",
+    "dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/index.ts",
     "start": "cross-env NODE_ENVIRONMENT=production node index"
   },
   "dependencies": {
@@ -25,11 +25,19 @@
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
     "koa-helmet": "^4.0.0",
-    "koa-respond": "^1.0.1",
     "koa-router": "^7.4.0"
   },
   "devDependencies": {
+    "@types/koa": "^2.0.46",
+    "@types/koa-bodyparser": "^5.0.1",
+    "@types/koa-helmet": "^3.1.2",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-router": "^7.0.32",
+    "@types/koa__cors": "^2.2.3",
     "koa-logger": "^3.2.0",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.3"
   }
 }
