@@ -10,6 +10,6 @@ router.get('/health', (ctx, next) => {
 });
 
 // user specific routes. path defined as /v1/user/
-router.use('/user', userRouter.routes(), userRouter.allowedMethods())
+router.use('/users', userRouter.routes(), userRouter.allowedMethods())
 
 export default router;
