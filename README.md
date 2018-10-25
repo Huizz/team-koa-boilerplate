@@ -23,9 +23,11 @@ By default the API server starts on port 3002, http://localhost:3002.
     - 3xx, if the resource was moved,
     - 4xx, if the request cannot be fulfilled because of a client error (like requesting a resource that does not exist),
     - 5xx, if something went wrong on the API side (like an exception happened).
+- If possible, keep routes simple and avoid dependencies between resources retrieved. e.g: 
+    - /users/:id
+    - /assets/:id
+- Permissions to be checked via authorization headers, whenever possible
 - Koa guide: https://github.com/koajs/koa/blob/master/docs/guide.md
-- Models are for business logic implementation. Models map to data in db
-
 
 ## Description as per koalerplate
 
