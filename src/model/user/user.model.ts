@@ -1,5 +1,5 @@
 // used when interacting with db
-import User from '../entity/user.entity';
+import User from './user.entity';
 
 const mockUsers: User[] =  [
     {
