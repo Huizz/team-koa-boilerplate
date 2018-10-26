@@ -1,9 +1,9 @@
 import { Context } from 'koa';
-import { getUser, getUsers } from './user.model';
+import UserModel from './user.model';
 
 class UserController {
   public static getUser = async (ctx: Context) => {
-    const user = await getUser(ctx.params.id)
+    const user = await UserModel.getUser(ctx.params.id)
       .catch((error) => {
         ctx.throw(500, error.message) // @TODO: this message is not being exposed to user
       });
@@ -12,7 +12,7 @@ class UserController {
   }
 
   public static getUsers = async (ctx: Context) => {
-    const users = await getUsers();
+    const users = await UserModel.getUsers();
     ctx.status = 200;
     ctx.body = users;
   }
