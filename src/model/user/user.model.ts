@@ -43,3 +43,10 @@ export const getUsers = () : Promise<User[]> => {
         }, 800);
     })
 }
+
+const UserModel = {
+    getUser,
+    getUsers
+}
+
+export default UserModel;
